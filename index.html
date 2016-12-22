@@ -2,6 +2,18 @@
 <meta charset="utf-8">
 <style>
 
+svg{
+  .axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  }}
+  
 .chart div {
   font: 10px sans-serif;
   background-color: steelblue;
@@ -11,9 +23,10 @@
   color: white;
 }
 
-
 </style>
+
 <div class="chart"></div>
+
 <script src="//d3js.org/d3.v3.min.js" /*accesses D3 library*/ ></script>
 <script>
 
@@ -30,16 +43,4 @@ d3.select(".chart")
     .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return d; });
 
-
-
-  .axis text {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
 </script>
