@@ -29,17 +29,18 @@ d3.select(".chart")
   .enter().append("div")
     .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return d; });
+<div class="chart"></div>
 
+var data = [6,14,19,21,27,35,46];
 
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
 
-  .axis text {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+d3.select(".chart")
+  .selectAll("div")
+    .data(data)
+  .enter().append("div")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; });
 </script>
