@@ -12,8 +12,18 @@
 }
 
 
+.charta div {
+  font: 10px sans-serif;
+  background-color: midnightblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
 </style>
 <div class="chart"></div>
+<div class="charta"></div>
 <script src="//d3js.org/d3.v3.min.js" /*accesses D3 library*/ ></script>
 <script>
 
@@ -29,17 +39,17 @@ d3.select(".chart")
   .enter().append("div")
     .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return d; });
-<div class="chart"></div>
 
-var data = [6,14,19,21,27,35,46];
 
-var x = d3.scale.linear()
-    .domain([0, d3.max(data)])
+var dataa = [6,14,19,21,27,35,46];
+
+var xa = d3.scale.linear()
+    .domain([0, d3.max(dataa)])
     .range([0, 420]);
 
-d3.select(".chart")
+d3.select(".charta")
   .selectAll("div")
-    .data(data)
+    .data(dataa)
   .enter().append("div")
     .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return d; });
