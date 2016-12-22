@@ -14,6 +14,7 @@
 
 </style>
 <div class="chart"></div>
+<div class="charta"></div>
 <script src="//d3js.org/d3.v3.min.js" /*accesses D3 library*/ ></script>
 <script>
 
@@ -29,18 +30,18 @@ d3.select(".chart")
   .enter().append("div")
     .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return d; });
-<div class="chart"></div>
+
 
 var dataa = [6,14,19,21,27,35,46];
 
-var x = d3.scale.linear()
+var xa = d3.scale.linear()
     .domain([0, d3.max(dataa)])
     .range([0, 420]);
 
-d3.select(".chart")
+d3.select(".charta")
   .selectAll("div")
     .dataa(dataa)
   .enter().append("div")
-    .style("width", function(d) { return x(d) + "px"; })
+    .style("width", function(d) { return xa(d) + "px"; })
     .text(function(d) { return d; });
 </script>
